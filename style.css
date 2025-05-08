@@ -1,0 +1,129 @@
+body {
+   font-family: 'Arial', sans-serif;
+   background-color: #f4f4f4;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   justify-content: center;
+   align-items: flex-start; /* Align to top for longer lists */
+   min-height: 100vh;
+   padding-top: 50px; /* Give some space from the top */
+}
+
+.container {
+   background-color: #fff;
+   padding: 25px;
+   border-radius: 8px;
+   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+   width: 90%;
+   max-width: 500px;
+}
+
+h1 {
+   text-align: center;
+   color: #333;
+   margin-bottom: 20px;
+}
+
+.input-area {
+   display: flex;
+   margin-bottom: 20px;
+}
+
+#taskInput {
+   flex-grow: 1;
+   padding: 10px;
+   border: 1px solid #ddd;
+   border-radius: 4px 0 0 4px;
+   font-size: 16px;
+}
+
+#addTaskBtn {
+   padding: 10px 15px;
+   background-color: #5cb85c;
+   color: white;
+   border: none;
+   border-radius: 0 4px 4px 0;
+   cursor: pointer;
+   font-size: 16px;
+   transition: background-color 0.3s ease;
+}
+
+#addTaskBtn:hover {
+   background-color: #4cae4c;
+}
+
+#taskList {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+}
+
+#taskList li {
+   background-color: #fff;
+   padding: 12px 10px;
+   border-bottom: 1px solid #eee;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   transition: background-color 0.2s ease;
+}
+
+#taskList li:last-child {
+   border-bottom: none;
+}
+
+#taskList li.completed span {
+   text-decoration: line-through;
+   color: #aaa;
+}
+
+#taskList li span {
+   flex-grow: 1;
+   cursor: pointer; /* To indicate it's clickable for completion */
+   margin-right: 10px;
+}
+
+.task-actions button {
+   background: none;
+   border: none;
+   cursor: pointer;
+   padding: 5px;
+   font-size: 1.1em;
+   margin-left: 5px;
+}
+
+.complete-btn {
+   color: #28a745; /* Green */
+}
+.complete-btn:hover {
+   color: #1e7e34;
+}
+
+.delete-btn {
+   color: #dc3545; /* Red */
+}
+.delete-btn:hover {
+   color: #c82333;
+}
+
+.clear-all {
+   display: block;
+   width: 100%;
+   padding: 10px;
+   background-color: #ffc107;
+   color: #333;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   font-size: 16px;
+   margin-top: 20px;
+   transition: background-color 0.3s ease;
+}
+.clear-all:hover {
+   background-color: #e0a800;
+}
+.clear-all:disabled {
+   background-color: #ccc;
+   cursor: not-allowed;
+}
